@@ -1,7 +1,0 @@
-To Do:
-Checkpoint system
-
-In Progress:
-Fix the particle system so when the player gets around 50m away
-
-
