@@ -44,6 +44,11 @@ public class GameManager : MonoBehaviour
         lives = 3;
 
         gameOver = false;
+
+        foreach (GameObject heart in hearts)
+        {
+            heart.SetActive(true);
+        }
     }
 
     public void OtherSide()
