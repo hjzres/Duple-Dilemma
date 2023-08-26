@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
     public Vector3 playerOneSpawn;
     public Vector3 playerTwoSpawn;
 
+    [Header("Game Over")]
+    public bool gameOver;
+    [SerializeField] int gameOverScene;
+
+
     private void Awake()
     {
         playerOneSpawn = playerOne.transform.position;
@@ -35,6 +41,8 @@ public class GameManager : MonoBehaviour
         playerTwoFrozen = false;
 
         lives = 3;
+
+        gameOver = false;
     }
 
     public void OtherSide()
@@ -72,6 +80,11 @@ public class GameManager : MonoBehaviour
         if(playerOne.transform.position.y <= minimumY || playerTwo.transform.position.y <= minimumY)
         {
             Death();
+        }
+
+        if(gameOver)
+        {
+            SceneManager.LoadScene(gameOverScene);
         }
     }
 }
