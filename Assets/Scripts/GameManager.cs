@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Over")]
     public bool gameOver;
     [SerializeField] int gameOverScene;
+    [SerializeField] GameObject[] hearts;
 
 
     private void Awake()
@@ -85,6 +86,19 @@ public class GameManager : MonoBehaviour
         if(gameOver)
         {
             SceneManager.LoadScene(gameOverScene);
+        }
+
+        switch (lives)
+        {
+            case 2:
+                hearts[0].SetActive(false);
+                break;
+            case 1:
+                hearts[1].SetActive(false);
+                break;
+            case 0:
+                gameOver = true;
+                break;
         }
     }
 }
