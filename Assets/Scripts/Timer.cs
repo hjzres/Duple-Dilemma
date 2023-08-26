@@ -9,17 +9,16 @@ public class Timer : MonoBehaviour
     [SerializeField] private Text timer;
     [SerializeField] private float time;
     private int t;
-    [SerializeField] private GameObject gm;
     private GameManager gameManager;
 
     private void Awake()
     {
-        gameManager = gm.GetComponent<GameManager>();
+        gameManager = GetComponent<GameManager>();
     }
 
     private void Update()
     {
-        if (t > 0)
+        if (time > 0)
         {
             time -= Time.deltaTime;
             t = (int)time;
@@ -27,7 +26,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-
+            gameManager.gameOver = true;
         }
     }
 }
