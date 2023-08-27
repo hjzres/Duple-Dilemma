@@ -6,7 +6,7 @@ public class Liquid : MonoBehaviour
 {
     [SerializeField] private string liquid;
     [SerializeField] private GameObject GameManager;
-    [SerializeField] private GameManager Manager;
+    private GameManager Manager;
 
     private void Awake()
     {
