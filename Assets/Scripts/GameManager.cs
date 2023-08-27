@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour
         if(gameOver)
         {
             SceneManager.LoadScene(gameOverScene);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         switch (lives)
