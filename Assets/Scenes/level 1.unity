@@ -1718,6 +1718,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1828023344}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: playerOneCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: playerTwoCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: winPlatformOne
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: winPlatformTwo
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2657,6 +2677,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 625393576619839200, guid: 2204eb4aef6a787419bfd1bffcc57b53, type: 3}
   m_PrefabInstance: {fileID: 1757764067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1828023344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2907383471068054723, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+  m_PrefabInstance: {fileID: 204824182}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903601076
 GameObject:

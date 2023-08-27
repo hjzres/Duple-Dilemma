@@ -10,7 +10,7 @@ public class Win : MonoBehaviour
     private WinPlatform win1;
     private WinPlatform win2;
     [Header("Player Cams")]
-    [SerializeField] private GameObject Canvas;
+    [SerializeField] private GameObject split;
     [SerializeField] private Camera playerOneCam, playerTwoCam;
 
     private int amount;
@@ -29,14 +29,14 @@ public class Win : MonoBehaviour
         {
             playerOneCam.gameObject.SetActive(false);
             playerTwoCam.rect = new Rect(0, 0, 1, 1);
-            Canvas.SetActive(false);
+            split.SetActive(false);
             amount++;
         }
         else if (win2.win && amount == 0)
         {
             playerTwoCam.gameObject.SetActive(false);
             playerOneCam.rect = new Rect(0, 0, 1, 1);
-            Canvas.SetActive(false);
+            split.SetActive(false);
             amount++;
         }
         if(amount == 2)
