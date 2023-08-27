@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 30185052}
   - component: {fileID: 30185051}
   m_Layer: 5
-  m_Name: Instructions
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1233,7 +1233,7 @@ GameObject:
   - component: {fileID: 2009956741}
   - component: {fileID: 2009956740}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
