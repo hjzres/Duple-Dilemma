@@ -12,6 +12,8 @@ public class Lever : MonoBehaviour
     [Header("Delay")]
     [SerializeField] private float Delay;
     [SerializeField] private bool isReady;
+    [Header("Objects")]
+    [SerializeField] private GameObject[] objects;
 
     private void Awake()
     {
@@ -47,6 +49,21 @@ public class Lever : MonoBehaviour
             {
                 isReady = true;
                 Delay = 1f;
+            }
+        }
+
+        if(On)
+        {
+            foreach(GameObject obj in objects)
+            {
+                obj.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach(GameObject obj in objects)
+            {
+                obj.SetActive(true);
             }
         }
     }
