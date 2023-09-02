@@ -7,6 +7,7 @@ public class Win : MonoBehaviour
     [Header("Platforms")]
     [SerializeField] private GameObject winPlatformOne;
     [SerializeField] private GameObject winPlatformTwo;
+    private WinPlatform WinPlat1, WinPlat2;
     private WinPlatform win1;
     private WinPlatform win2;
     [Header("Player Cams")]
