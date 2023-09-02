@@ -5,7 +5,8 @@ using UnityEngine;
 public class WinPlatform : MonoBehaviour
 {
     public bool win;
-    [SerializeField] private string whichPlayer;
+    public string whichPlayer;
+    public string otherPlayer;
     [SerializeField] private GameObject gameManager;
     private GameManager Manager;
 
@@ -20,10 +21,12 @@ public class WinPlatform : MonoBehaviour
         if (other.gameObject.name == "Capsule 1")
         {
             whichPlayer = "Player 1";
+            otherPlayer = "Player 2";
         }
         if (other.gameObject.name == "Capsule 2")
         {
             whichPlayer = "Player 2";
+            otherPlayer = "Player 1";
         }
         else
         {

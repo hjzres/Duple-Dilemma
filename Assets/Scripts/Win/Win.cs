@@ -7,12 +7,13 @@ public class Win : MonoBehaviour
     [Header("Platforms")]
     [SerializeField] private GameObject winPlatformOne;
     [SerializeField] private GameObject winPlatformTwo;
-    private WinPlatform WinPlat1, WinPlat2;
-    private WinPlatform win1;
-    private WinPlatform win2;
+    private WinPlatform win1, win2;
     [Header("Player Cams")]
     [SerializeField] private GameObject split;
     [SerializeField] private Camera playerOneCam, playerTwoCam;
+    //Player
+    private Camera realWin1, realWin2;
+    private Camera other1, other2;
 
     private int amount;
 
@@ -26,16 +27,48 @@ public class Win : MonoBehaviour
 
     private void Update()
     {
+        if(win1.whichPlayer == "Player 1")
+        {
+            realWin1 = playerOneCam;
+            other1 = playerTwoCam;
+        }
+        else if(win1.whichPlayer == "Player 2")
+        {
+            realWin1 = playerTwoCam;
+            other1 = playerOneCam;
+        }
+        else
+        {
+            realWin1 = null;
+            other1 = null;
+        }
+
+        if(win2.whichPlayer == "Player 1")
+        {
+            realWin2 = playerOneCam;
+            other2 = playerTwoCam;
+        } 
+        else if(win1.whichPlayer == "Player 2")
+        {
+            realWin2 = playerTwoCam;
+            other2 = playerOneCam;
+        }
+        else
+        {
+            realWin2 = null;
+            other2 = null;
+        }
+
         if (win1.win && amount == 0)
         {
-            playerOneCam.gameObject.SetActive(false);
+            realWin1.gameObject.SetActive(false);
             playerTwoCam.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
             amount++;
         }
         else if (win2.win && amount == 0)
         {
-            playerTwoCam.gameObject.SetActive(false);
+            GameObject.Find(win2.whichPlayer).gameObject.SetActive(false);
             playerOneCam.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
             amount++;

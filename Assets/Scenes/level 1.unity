@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 6121354413943155256, guid: 80cbc195edaa99743b93d7616fa30aae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6121354413943155267, guid: 80cbc195edaa99743b93d7616fa30aae, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -6241,7 +6245,7 @@ Transform:
   m_GameObject: {fileID: 1461800127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6816, y: -8.5997, z: -6.17}
+  m_LocalPosition: {x: -86.04, y: -8.5997, z: -6.17}
   m_LocalScale: {x: 6.9404106, y: 2.1360116, z: 0.1889}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7427,6 +7431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lava
       objectReference: {fileID: 0}
+    - target: {fileID: 625393576619839201, guid: 2204eb4aef6a787419bfd1bffcc57b53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 625393576619839212, guid: 2204eb4aef6a787419bfd1bffcc57b53, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -7832,7 +7840,7 @@ Transform:
   m_GameObject: {fileID: 1903601076}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.8416, y: -8.5997, z: -6.17}
+  m_LocalPosition: {x: -2.2, y: -8.5997, z: -6.17}
   m_LocalScale: {x: 6.9404106, y: 2.1360116, z: 0.1889}
   m_ConstrainProportionsScale: 0
   m_Children: []
