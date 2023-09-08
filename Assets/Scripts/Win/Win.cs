@@ -63,22 +63,23 @@ public class Win : MonoBehaviour
             other2 = null;
         }
 
-        if (win1.win && amount == 0)
+        if (win1.win && amount <= 1)
         {
-            realWin1.gameObject.SetActive(false);
-            playerTwoCam.rect = new Rect(0, 0, 1, 1);
+            GameObject.Find(win1.whichPlayer).SetActive(false);
+            other1.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
             amount++;
         }
-        else if (win2.win && amount == 0)
+        else if (win2.win && amount <= 1)
         {
-            GameObject.Find(win2.whichPlayer).gameObject.SetActive(false);
-            playerOneCam.rect = new Rect(0, 0, 1, 1);
+            GameObject.Find(win2.whichPlayer).SetActive(false);
+            other2.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
             amount++;
         }
         if(amount == 2)
         {
+            win = true;
             winDisplay.SetActive(true);
             Invoke("ChangeScene", 3);
         }

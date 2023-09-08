@@ -1232,30 +1232,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1970995490878663389, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
-      propertyPath: m_Name
-      value: Capsule 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970995490911543379, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
-      propertyPath: sensX
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970995490911543379, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
-      propertyPath: sensY
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970995491674514416, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970995491674514416, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970995491674514417, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1970995491674514417, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.44
@@ -1885,25 +1861,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8239437674559014005, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
-      propertyPath: m_Name
-      value: Capsule 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8239437674695877899, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
       propertyPath: m_Name
       value: Player 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8239437674695877900, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
-      propertyPath: jumpForce
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8239437674695877900, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8239437674695877901, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8239437674695877901, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1944,14 +1904,6 @@ PrefabInstance:
     - target: {fileID: 8239437674695877901, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8239437676201398175, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
-      propertyPath: sensX
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8239437676201398175, guid: 1e5e2b4688b2c2b46a0a13ff77e10dd7, type: 3}
-      propertyPath: sensY
-      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1970995490878663384}
   - component: {fileID: 1970995490878663387}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule 1
   m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05de7b4115d7ec458661cedf6266fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 100
-  sensY: 100
+  sensX: 400
+  sensY: 400
   orientation: {fileID: 1970995490122901476}
 --- !u!114 &711825443
 MonoBehaviour:

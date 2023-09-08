@@ -3655,7 +3655,7 @@ PrefabInstance:
     - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: winPlatformTwo
       value: 
-      objectReference: {fileID: 1946933336}
+      objectReference: {fileID: 1896646814}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7811,6 +7811,11 @@ MeshFilter:
 Camera:
   m_CorrespondingSourceObject: {fileID: 1970995490911543381, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
   m_PrefabInstance: {fileID: 2103101459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1896646814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2940345560695313542, guid: 6400d2a63ec71a84ab3c16b6df057a02, type: 3}
+  m_PrefabInstance: {fileID: 714868969}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903601076
 GameObject:
