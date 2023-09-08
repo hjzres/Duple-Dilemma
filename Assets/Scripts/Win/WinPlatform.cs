@@ -28,10 +28,6 @@ public class WinPlatform : MonoBehaviour
             whichPlayer = "Player 2";
             otherPlayer = "Player 1";
         }
-        else
-        {
-            whichPlayer = other.gameObject.name;
-        }
 
         Manager.Freeze(GameObject.Find(whichPlayer), true);
 

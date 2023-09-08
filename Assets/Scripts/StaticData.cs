@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class StaticData : MonoBehaviour
 {
-    public static int lvlOneStars;
-    public static int lvlTwoStars;
-    public static int lvlThreeStars;
+    public static int lvlOneStars = 0;
+    public static int lvlTwoStars = 0;
+    public static int lvlThreeStars = 0;
+
+    public static int level;
 }

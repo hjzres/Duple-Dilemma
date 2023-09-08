@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Win : MonoBehaviour
     private Camera other1, other2;
 
     private int amount;
+    [Header("Other")]
+    public bool win;
+    [SerializeField] private GameObject winDisplay;
 
 
     private void Awake()
@@ -75,7 +79,12 @@ public class Win : MonoBehaviour
         }
         if(amount == 2)
         {
-
+            winDisplay.SetActive(true);
+            Invoke("ChangeScene", 3);
         }
+    }
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
