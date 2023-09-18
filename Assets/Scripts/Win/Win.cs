@@ -16,7 +16,7 @@ public class Win : MonoBehaviour
     private Camera realWin1, realWin2;
     private Camera other1, other2;
 
-    private int amount;
+    [SerializeField] private int amount;
     [Header("Other")]
     public bool win;
     [SerializeField] private GameObject winDisplay;
@@ -26,63 +26,75 @@ public class Win : MonoBehaviour
     {
         win1 = winPlatformOne.GetComponent<WinPlatform>();
         win2 = winPlatformTwo.GetComponent<WinPlatform>();
+
         amount = 0;
     }
 
     private void Update()
     {
-        if(win1.whichPlayer == "Player 1")
+        switch (win1.whichPlayer)
         {
-            realWin1 = playerOneCam;
-            other1 = playerTwoCam;
-        }
-        else if(win1.whichPlayer == "Player 2")
-        {
-            realWin1 = playerTwoCam;
-            other1 = playerOneCam;
-        }
-        else
-        {
-            realWin1 = null;
-            other1 = null;
-        }
-
-        if(win2.whichPlayer == "Player 1")
-        {
-            realWin2 = playerOneCam;
-            other2 = playerTwoCam;
-        } 
-        else if(win1.whichPlayer == "Player 2")
-        {
-            realWin2 = playerTwoCam;
-            other2 = playerOneCam;
-        }
-        else
-        {
-            realWin2 = null;
-            other2 = null;
+            case "Player 1":
+                realWin1 = playerOneCam;
+                other1 = playerTwoCam;
+                break;
+            case "Player 2":
+                realWin1 = playerTwoCam;
+                other1 = playerOneCam;
+                break;
+            case null:
+                realWin1 = null;
+                other1 = null;
+                break;
         }
 
-        if (win1.win && amount <= 1)
+        switch (win2.whichPlayer)
         {
+            case "Player 1":
+                realWin2 = playerOneCam;
+                other2 = playerTwoCam;
+                break;
+            case "Player 2":
+                realWin2 = playerTwoCam;
+                other2 = playerOneCam;
+                break;
+            case null:
+                realWin2 = null;
+                realWin2 = null;
+                break;
+        }
+
+
+        if (win1.win)
+        {
+            amount++;
             GameObject.Find(win1.whichPlayer).SetActive(false);
             other1.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
-            amount++;
+            win1.win = false;
         }
-        else if (win2.win && amount <= 1)
+
+        if (win2.win)
         {
+            amount++;
             GameObject.Find(win2.whichPlayer).SetActive(false);
             other2.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
-            amount++;
+            win2.win = false;
         }
+
         if(amount == 2)
         {
             win = true;
             winDisplay.SetActive(true);
-            Invoke("ChangeScene", 3);
+            yield return new WaitForSeconds(3);
+            Invoke("ChangeScene", 10f);
         }
+    }
+
+    IEnumerator changer()
+    {
+
     }
     public void ChangeScene()
     {

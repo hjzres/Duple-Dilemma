@@ -15,7 +15,7 @@ public class WinPlatform : MonoBehaviour
         win = false;
         Manager = gameManager.GetComponent<GameManager>();
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Capsule 1")
@@ -23,20 +23,16 @@ public class WinPlatform : MonoBehaviour
             whichPlayer = "Player 1";
             otherPlayer = "Player 2";
         }
+        
         if (other.gameObject.name == "Capsule 2")
         {
             whichPlayer = "Player 2";
             otherPlayer = "Player 1";
         }
-
+        
         Manager.Freeze(GameObject.Find(whichPlayer), true);
 
         win = true;
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        whichPlayer = null;
     }
 
     private void Update()
