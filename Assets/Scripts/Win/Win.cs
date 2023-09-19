@@ -17,6 +17,7 @@ public class Win : MonoBehaviour
     private Camera other1, other2;
 
     [SerializeField] private int amount;
+    private bool win1Already, win2Already;
     [Header("Other")]
     public bool win;
     [SerializeField] private GameObject winDisplay;
@@ -28,6 +29,8 @@ public class Win : MonoBehaviour
         win2 = winPlatformTwo.GetComponent<WinPlatform>();
 
         amount = 0;
+        win1Already = false;
+        win2Already = false;
     }
 
     private void Update()
@@ -65,39 +68,37 @@ public class Win : MonoBehaviour
         }
 
 
-        if (win1.win)
+        if (win1.win && !win1Already)
         {
             amount++;
             GameObject.Find(win1.whichPlayer).SetActive(false);
             other1.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
             win1.win = false;
+            win1Already = true;
         }
 
-        if (win2.win)
+        if (win2.win && !win2Already)
         {
             amount++;
             GameObject.Find(win2.whichPlayer).SetActive(false);
             other2.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
             win2.win = false;
+            win2Already = true;
         }
 
-        if(amount == 2)
+        if (amount == 2)
         {
-            win = true;
-            winDisplay.SetActive(true);
-            yield return new WaitForSeconds(3);
-            Invoke("ChangeScene", 10f);
+            ChangeSceneOnWin();
         }
     }
 
-    IEnumerator changer()
+    IEnumerator ChangeSceneOnWin()
     {
-
-    }
-    public void ChangeScene()
-    {
+        win = true;
+        winDisplay.SetActive(true);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(1);
     }
 }
