@@ -13,7 +13,8 @@ public class Lever : MonoBehaviour
     [SerializeField] private float Delay;
     [SerializeField] private bool isReady;
     [Header("Objects")]
-    [SerializeField] private GameObject[] objects;
+    [SerializeField] private GameObject[] onOnOn;
+    [SerializeField] private GameObject[] offOnOn;
 
     private void Awake()
     {
@@ -54,16 +55,26 @@ public class Lever : MonoBehaviour
 
         if(On)
         {
-            foreach(GameObject obj in objects)
+            foreach(GameObject obj in onOnOn)
             {
                 obj.SetActive(false);
+            }
+
+            foreach(GameObject obj in offOnOn)
+            {
+                obj.SetActive(true);
             }
         }
         else
         {
-            foreach(GameObject obj in objects)
+            foreach(GameObject obj in onOnOn)
             {
                 obj.SetActive(true);
+            }
+
+            foreach(GameObject obj in offOnOn)
+            {
+                obj.SetActive(false);
             }
         }
     }

@@ -21,6 +21,7 @@ public class Win : MonoBehaviour
     [Header("Other")]
     public bool win;
     [SerializeField] private GameObject winDisplay;
+    private float timer;
 
 
     private void Awake()
@@ -34,7 +35,16 @@ public class Win : MonoBehaviour
     }
 
     private void Update()
-    {
+    { 
+        if (win1.win)
+        {
+            win1Already = true;
+        }
+        if (win2.win)
+        {
+            win2Already = true;
+        }
+
         switch (win1.whichPlayer)
         {
             case "Player 1":
@@ -68,37 +78,54 @@ public class Win : MonoBehaviour
         }
 
 
-        if (win1.win && !win1Already)
-        {
-            amount++;
-            GameObject.Find(win1.whichPlayer).SetActive(false);
+        if (win1Already)
+        {   
+            if(!win2Already)
+            {
+                GameObject.Find(win1.whichPlayer).SetActive(false);
+            } 
+            else
+            {
+                var rb = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
+                rb.constraints = RigidbodyConstraints.FreezeAll;
+            }
+
             other1.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
-            win1.win = false;
-            win1Already = true;
+
         }
 
-        if (win2.win && !win2Already)
+        if (win2Already)
         {
-            amount++;
-            GameObject.Find(win2.whichPlayer).SetActive(false);
+            if (!win1Already)
+            {
+                GameObject.Find(win2.whichPlayer).SetActive(false);
+            } 
+            else
+            {
+                var rb = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
+                rb.constraints = RigidbodyConstraints.FreezeAll;
+            }
+
             other2.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
-            win2.win = false;
-            win2Already = true;
+            
         }
 
-        if (amount == 2)
+        if(win1Already && win2Already)
         {
-            ChangeSceneOnWin();
+            timer += Time.deltaTime;
+            
         }
-    }
+        if(timer >= 3)
+        {
+            win = true;
+        }
 
-    IEnumerator ChangeSceneOnWin()
-    {
-        win = true;
-        winDisplay.SetActive(true);
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(1);
+        if(win1Already && win2Already && win)
+        { 
+            
+            SceneManager.LoadScene(2);
+        }
     }
 }

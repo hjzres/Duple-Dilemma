@@ -20,6 +20,8 @@ public class Stars : MonoBehaviour
 
     private void Update()
     {
+        stars = StaticData.lvlOneStars;
+
         if(stars >= 1)
         {
             filled[0].SetActive(true);

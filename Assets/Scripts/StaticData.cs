@@ -9,5 +9,5 @@ public class StaticData : MonoBehaviour
     public static int lvlTwoStars = 0;
     public static int lvlThreeStars = 0;
 
-    public static int level;
+    public static int level = 1;
 }

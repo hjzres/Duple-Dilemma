@@ -46,7 +46,7 @@ public class Timer : MonoBehaviour
                 {
                     stars = 2;
                 }
-                else if (time > 0)
+                else
                 {
                     stars = 1;
                 }
