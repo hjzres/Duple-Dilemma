@@ -11,7 +11,7 @@ public class Win : MonoBehaviour
     private WinPlatform win1, win2;
     [Header("Player Cams")]
     [SerializeField] private GameObject split;
-    [SerializeField] private Camera playerOneCam, playerTwoCam;
+    [SerializeField] private Camera playerOneCam, playerTwoCam; 
     //Player
     private Camera realWin1, realWin2;
     private Camera other1, other2;
@@ -81,46 +81,32 @@ public class Win : MonoBehaviour
 
         if (win1Already)
         {   
-            if(!win2Already)
-            {
-                GameObject.Find(win1.whichPlayer).SetActive(false);
-            } 
-            else
-            {
-                var rb1 = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
-                rb1.constraints = RigidbodyConstraints.FreezeAll;
-            }
+            var rb1 = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
+            rb1.constraints = RigidbodyConstraints.FreezeAll;
 
+            realWin1.rect = Rect.zero;
             other1.rect = new Rect(0, 0, 1, 1);
+
             split.SetActive(false);
-            amount++;
-            win1Already = false;
         }
 
         if (win2Already)
         {
-            if (!win1Already)
-            {
-                GameObject.Find(win2.whichPlayer).SetActive(false);
-            } 
-            else
-            {
-                var rb2 = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
-                rb2.constraints = RigidbodyConstraints.FreezeAll;
-            }
-
+            var rb2 = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
+            rb2.constraints = RigidbodyConstraints.FreezeAll;
+            
+            realWin2.rect = Rect.zero;
             other2.rect = new Rect(0, 0, 1, 1);
+
             split.SetActive(false);
-            amount++;
-            win2Already = false;
         }
 
-        if(amount >= 2)
+        if(win1Already && win2Already)
         {
             Debug.Log("test");
             timer += Time.deltaTime;
 
-            if (timer >= 3)
+            if (timer >= 5)
             {
                 win = true;
             }
