@@ -30,6 +30,7 @@ public class Win : MonoBehaviour
         win2 = winPlatformTwo.GetComponent<WinPlatform>();
 
         amount = 0;
+
         win1Already = false;
         win2Already = false;
     }
@@ -86,13 +87,14 @@ public class Win : MonoBehaviour
             } 
             else
             {
-                var rb = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
-                rb.constraints = RigidbodyConstraints.FreezeAll;
+                var rb1 = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
+                rb1.constraints = RigidbodyConstraints.FreezeAll;
             }
 
             other1.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
-
+            amount++;
+            win1Already = false;
         }
 
         if (win2Already)
@@ -103,23 +105,25 @@ public class Win : MonoBehaviour
             } 
             else
             {
-                var rb = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
-                rb.constraints = RigidbodyConstraints.FreezeAll;
+                var rb2 = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
+                rb2.constraints = RigidbodyConstraints.FreezeAll;
             }
 
             other2.rect = new Rect(0, 0, 1, 1);
             split.SetActive(false);
-            
+            amount++;
+            win2Already = false;
         }
 
-        if(win1Already && win2Already)
+        if(amount >= 2)
         {
+            Debug.Log("test");
             timer += Time.deltaTime;
-            
-        }
-        if(timer >= 3)
-        {
-            win = true;
+
+            if (timer >= 3)
+            {
+                win = true;
+            }
         }
 
         if(win1Already && win2Already && win)
@@ -127,5 +131,9 @@ public class Win : MonoBehaviour
             
             SceneManager.LoadScene(2);
         }
+    }
+    public void winOutput()
+    {
+        
     }
 }

@@ -10,4 +10,12 @@ public class StaticData : MonoBehaviour
     public static int lvlThreeStars = 0;
 
     public static int level = 1;
+
+    //Scenes
+    public static int TitleScreen;
+    public static int levels;
+    public static int lvlOne;
+    public static int lvlTwo;
+    public static int lvlThree;
+    public static int lose;
 }
