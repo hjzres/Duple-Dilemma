@@ -25,19 +25,21 @@ public class Timer : MonoBehaviour
     {
         Debug.Log(StaticData.lvlOneStars);
 
-        if (time > 0 && !win.win)
+        if (!Won())
         {
             time -= Time.deltaTime;
             t = (int)time;
             timer.text = t.ToString();
         }
-        else
+        
+        if(t < 0)
         {
             gameManager.gameOver = true;
         }
 
-        if (win.win1Already && win.win2Already)
+        if (Won())
         {
+            Debug.Log("test");
             if(time > TimeUntilOneStar)
             {
                 if (time >= TimeUntilTwoStars)
@@ -75,5 +77,11 @@ public class Timer : MonoBehaviour
                     break;
             }
         }
+        Debug.Log(Won());
+    }
+
+    private bool Won()
+    {
+        return win.win1Already && win.win2Already;
     }
 }
