@@ -27,6 +27,7 @@ public class Win : MonoBehaviour
     [Header("Win Screen")]
     public GameObject winScreen;
     private Animator animator;
+    private GameManager gameManager;
 
 
     private void Awake()
@@ -36,8 +37,12 @@ public class Win : MonoBehaviour
 
         animator = winScreen.GetComponent<Animator>();
 
+        gameManager = GetComponent<GameManager>();
+
         win1Already = false;
         win2Already = false;
+
+        winDisplay.SetActive(false);
     }
 
     private void Update()
@@ -83,11 +88,9 @@ public class Win : MonoBehaviour
                 break;
         }
 
-
-        if (win1Already)
+        if (win1Already && realWin1 != null && other1 != null && GameObject.Find(win1.whichPlayer) != null)
         {
-            var rb1 = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
-            rb1.constraints = RigidbodyConstraints.FreezeAll;
+            gameManager.Freeze(GameObject.Find(win1.whichPlayer), true);
 
             realWin1.rect = Rect.zero;
             other1.rect = new Rect(0, 0, 1, 1);
@@ -95,10 +98,9 @@ public class Win : MonoBehaviour
             split.SetActive(false);
         }
 
-        if (win2Already)
+        if (win2Already && realWin2 != null && other2 != null && GameObject.Find(win2.whichPlayer) != null)
         {
-            var rb2 = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
-            rb2.constraints = RigidbodyConstraints.FreezeAll;
+            gameManager.Freeze(GameObject.Find(win2.whichPlayer), true);
 
             realWin2.rect = Rect.zero;
             other2.rect = new Rect(0, 0, 1, 1);
@@ -106,11 +108,13 @@ public class Win : MonoBehaviour
             split.SetActive(false);
         }
 
+
         if (win1Already && win2Already)
         {
             timer += Time.deltaTime;
 
             if (animator) {
+                winDisplay.SetActive(true);
                 animator.Play("WinScreenAnimation");
 
             }
@@ -125,8 +129,9 @@ public class Win : MonoBehaviour
 
         if (win)
         {
-
             SceneManager.LoadScene(2);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

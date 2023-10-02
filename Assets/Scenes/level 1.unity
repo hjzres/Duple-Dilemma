@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -988,10 +988,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 832831026094526056, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.9999695
+      objectReference: {fileID: 0}
     - target: {fileID: 1756424968090632919, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 4946883}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.8868332
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.9038536
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.10683316
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.15729289
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -1002,14 +1034,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00001049
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 564
+      value: 2.9380035
       objectReference: {fileID: 0}
     - target: {fileID: 2333066236281168186, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907383471068054721, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_UiScaleMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907383471068054723, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
@@ -3680,6 +3716,14 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1298060419}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: playerOne
+      value: 
+      objectReference: {fileID: 367916641}
+    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: playerTwo
+      value: 
+      objectReference: {fileID: 657933900}
     - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: winScreen
       value: 

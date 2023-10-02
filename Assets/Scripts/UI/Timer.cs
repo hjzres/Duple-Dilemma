@@ -38,11 +38,11 @@ public class Timer : MonoBehaviour
         {
             if(time < TimeUntilOneStar)
             {
-                if (time > TimeUntilTwoStars)
+                if (time >= TimeUntilTwoStars)
                 {
                     stars = 3;
                 }
-                else if (time > TimeUntilOneStar)
+                else if (time >= TimeUntilOneStar)
                 {
                     stars = 2;
                 }
