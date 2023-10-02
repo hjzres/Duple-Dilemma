@@ -17,7 +17,7 @@ public class Win : MonoBehaviour
     private Camera other1, other2;
 
     [SerializeField] private int amount;
-    private bool win1Already, win2Already;
+    public bool win1Already, win2Already;
 
     [Header("Other")]
     public bool win;
@@ -26,6 +26,7 @@ public class Win : MonoBehaviour
 
     [Header("Win Screen")]
     public GameObject winScreen;
+    private WinScreen ws;
     private Animator animator;
     private GameManager gameManager;
 
@@ -36,7 +37,7 @@ public class Win : MonoBehaviour
         win2 = winPlatformTwo.GetComponent<WinPlatform>();
 
         animator = winScreen.GetComponent<Animator>();
-
+        ws = winScreen.GetComponent<WinScreen>();
         gameManager = GetComponent<GameManager>();
 
         win1Already = false;
@@ -116,7 +117,7 @@ public class Win : MonoBehaviour
             if (animator) {
                 winDisplay.SetActive(true);
                 animator.Play("WinScreenAnimation");
-
+                StartCoroutine(ws.fillingStars());
             }
 
             if (timer >= 5)

@@ -23,6 +23,8 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(StaticData.lvlOneStars);
+
         if (time > 0 && !win.win)
         {
             time -= Time.deltaTime;
@@ -34,9 +36,9 @@ public class Timer : MonoBehaviour
             gameManager.gameOver = true;
         }
 
-        if (win.win)
+        if (win.win1Already && win.win2Already)
         {
-            if(time < TimeUntilOneStar)
+            if(time > TimeUntilOneStar)
             {
                 if (time >= TimeUntilTwoStars)
                 {
