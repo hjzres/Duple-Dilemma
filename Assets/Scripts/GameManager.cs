@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] int gameOverScene;
     [SerializeField] GameObject[] hearts;
 
-
     private void Awake()
     {
         playerOneSpawn = playerOne.transform.position;
