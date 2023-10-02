@@ -16,13 +16,11 @@ public class WinScreen : MonoBehaviour
     public Animator animator;
     [Header("GameObjects")]
     public GameObject gameManager;
-    private Win win;
 
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        win = gameManager.GetComponent<Win>();
 
         foreach(GameObject star in filledStars)
         {
@@ -32,10 +30,7 @@ public class WinScreen : MonoBehaviour
 
     private void Update()
     {
-        
-
         text.text = "You have completed " + SceneManager.GetActiveScene().name;
-
     }
 
     public IEnumerator fillingStars()

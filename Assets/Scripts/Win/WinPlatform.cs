@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class WinPlatform : MonoBehaviour
 {
+    [Header("win")]
     public bool win;
+    [Header("players")]
     public string whichPlayer;
     public string otherPlayer;
-    [SerializeField] private GameObject gameManager;
-    private GameManager Manager;
 
     private void Awake()
     {
         win = false;
-        Manager = gameManager.GetComponent<GameManager>();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -31,10 +30,5 @@ public class WinPlatform : MonoBehaviour
         }
 
         win = true;
-    }
-
-    private void Update()
-    {
-        
     }
 }
