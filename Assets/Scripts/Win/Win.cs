@@ -18,10 +18,15 @@ public class Win : MonoBehaviour
 
     [SerializeField] private int amount;
     private bool win1Already, win2Already;
+
     [Header("Other")]
     public bool win;
     [SerializeField] private GameObject winDisplay;
     private float timer;
+
+    [Header("Win Screen")]
+    public GameObject winScreen;
+    private Animator animator;
 
 
     private void Awake()
@@ -29,14 +34,14 @@ public class Win : MonoBehaviour
         win1 = winPlatformOne.GetComponent<WinPlatform>();
         win2 = winPlatformTwo.GetComponent<WinPlatform>();
 
-        amount = 0;
+        animator = winScreen.GetComponent<Animator>();
 
         win1Already = false;
         win2Already = false;
     }
 
     private void Update()
-    { 
+    {
         if (win1.win)
         {
             win1Already = true;
@@ -80,7 +85,7 @@ public class Win : MonoBehaviour
 
 
         if (win1Already)
-        {   
+        {
             var rb1 = GameObject.Find(win1.whichPlayer).GetComponent<Rigidbody>();
             rb1.constraints = RigidbodyConstraints.FreezeAll;
 
@@ -94,32 +99,34 @@ public class Win : MonoBehaviour
         {
             var rb2 = GameObject.Find(win2.whichPlayer).GetComponent<Rigidbody>();
             rb2.constraints = RigidbodyConstraints.FreezeAll;
-            
+
             realWin2.rect = Rect.zero;
             other2.rect = new Rect(0, 0, 1, 1);
 
             split.SetActive(false);
         }
 
-        if(win1Already && win2Already)
+        if (win1Already && win2Already)
         {
-            Debug.Log("test");
             timer += Time.deltaTime;
+
+            if (animator) {
+                animator.Play("WinScreenAnimation");
+
+            }
 
             if (timer >= 5)
             {
+
+
                 win = true;
             }
         }
 
-        if(win1Already && win2Already && win)
-        { 
-            
+        if (win)
+        {
+
             SceneManager.LoadScene(2);
         }
-    }
-    public void winOutput()
-    {
-        
     }
 }
