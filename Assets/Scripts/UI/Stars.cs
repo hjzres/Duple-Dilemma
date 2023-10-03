@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stars : MonoBehaviour
 {
     public int stars;
+    public int level;
     [SerializeField] private GameObject[] filled;
     [SerializeField] private GameObject[] unfilled;
 
@@ -20,7 +21,22 @@ public class Stars : MonoBehaviour
 
     private void Update()
     {
-        stars = StaticData.lvlOneStars;
+        switch (level)
+        {
+            case 1:
+                stars = StaticData.lvlOneStars;
+                break;
+            case 2:
+                stars = StaticData.lvlTwoStars;
+                break;
+            case 3:
+                stars = StaticData.lvlThreeStars;
+                break;
+            default:
+                stars = 0;
+                break;
+        }
+        
 
         if(stars >= 1)
         {

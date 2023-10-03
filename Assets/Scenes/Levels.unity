@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -694,6 +694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375726941}
+  - component: {fileID: 375726942}
   m_Layer: 0
   m_Name: Level 2
   m_TagString: Untagged
@@ -722,6 +723,28 @@ Transform:
   - {fileID: 1977451028}
   m_Father: {fileID: 862436310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375726942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375726940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de44200f0d392144ae901476d7c9240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars: 0
+  level: 2
+  filled:
+  - {fileID: 1664807817}
+  - {fileID: 167439954}
+  - {fileID: 680089538}
+  unfilled:
+  - {fileID: 878533020}
+  - {fileID: 353942681}
+  - {fileID: 1977451027}
 --- !u!1 &387733188
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387733189}
+  - component: {fileID: 387733190}
   m_Layer: 0
   m_Name: Level 3
   m_TagString: Untagged
@@ -759,6 +783,28 @@ Transform:
   - {fileID: 1320574927}
   m_Father: {fileID: 862436310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387733190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387733188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de44200f0d392144ae901476d7c9240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars: 0
+  level: 3
+  filled:
+  - {fileID: 194787010}
+  - {fileID: 694224511}
+  - {fileID: 493111756}
+  unfilled:
+  - {fileID: 1507410511}
+  - {fileID: 1251970386}
+  - {fileID: 1320574926}
 --- !u!1 &430392196
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stars: 0
+  level: 1
   filled:
   - {fileID: 591496681}
   - {fileID: 124101092}
@@ -2271,6 +2318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stars: 0
+  level: 0
   filled:
   - {fileID: 194787010}
   - {fileID: 694224511}
@@ -2514,6 +2562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stars: 0
+  level: 0
   filled:
   - {fileID: 1664807817}
   - {fileID: 167439954}

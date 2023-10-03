@@ -8,15 +8,15 @@ public class Button : MonoBehaviour
     public void SceneChange(int scene)
     {
         SceneManager.LoadScene(scene);
-        if(scene == 3)
+        if(scene == StaticData.lvlOne)
         {
             StaticData.level = 1;
         }
-        if(scene == 4)
+        if(scene == StaticData.lvlTwo)
         {
             StaticData.level = 2;
         }
-        if(scene == 5)
+        if (scene == StaticData.lvlThree)
         {
             StaticData.level = 3;
         }
