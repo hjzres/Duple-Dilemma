@@ -7,18 +7,40 @@ public class Button : MonoBehaviour
 {
     public void SceneChange(int scene)
     {
-        SceneManager.LoadScene(scene);
         if(scene == StaticData.lvlOne)
         {
             StaticData.level = 1;
         }
         if(scene == StaticData.lvlTwo)
         {
-            StaticData.level = 2;
+            if (StaticData.lvlOneStars >= 2)
+            {
+                StaticData.level = 2;
+            } 
         }
         if (scene == StaticData.lvlThree)
         {
-            StaticData.level = 3;
+            if (StaticData.lvlTwoStars >= 2)
+            {
+                StaticData.level = 3;
+            }
         }
+
+        switch (StaticData.level)
+        {
+            case 1:
+                SceneManager.LoadScene(StaticData.lvlOne);
+                break;
+            case 2:
+                SceneManager.LoadScene(StaticData.lvlTwo);
+                break;
+            case 3:
+                SceneManager.LoadScene(StaticData.lvlThree);
+                break;
+            default:
+                SceneManager.LoadScene(StaticData.titleScreen);
+                break;
+        }
+
     }
 }

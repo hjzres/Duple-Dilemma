@@ -40,21 +40,20 @@ public class Timer : MonoBehaviour
         if (Won())
         {
             Debug.Log("test");
-            if(time > TimeUntilOneStar)
+            
+            if (time >= TimeUntilTwoStars)
             {
-                if (time >= TimeUntilTwoStars)
-                {
-                    stars = 3;
-                }
-                else if (time >= TimeUntilOneStar)
-                {
-                    stars = 2;
-                }
-                else
-                {
-                    stars = 1;
-                }
+                stars = 3;
             }
+            else if (time >= TimeUntilOneStar)
+            {
+                stars = 2;
+            }
+            else
+            {
+                stars = 1;
+            }
+            
             switch (StaticData.level)
             {
                 case 1:
