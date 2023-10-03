@@ -10,19 +10,27 @@ public class Button : MonoBehaviour
         if(scene == StaticData.lvlOne)
         {
             StaticData.level = 1;
-        }
+        } 
         if(scene == StaticData.lvlTwo)
         {
             if (StaticData.lvlOneStars >= 2)
             {
                 StaticData.level = 2;
-            } 
+            }
+            else
+            {
+                scene = StaticData.titleScreen;
+            }
         }
         if (scene == StaticData.lvlThree)
         {
             if (StaticData.lvlTwoStars >= 2)
             {
                 StaticData.level = 3;
+            }
+            else
+            {
+                scene = StaticData.titleScreen;
             }
         }
 
@@ -38,9 +46,14 @@ public class Button : MonoBehaviour
                 SceneManager.LoadScene(StaticData.lvlThree);
                 break;
             default:
-                SceneManager.LoadScene(StaticData.titleScreen);
+                SceneManager.LoadScene(scene);
                 break;
         }
 
+    }
+
+    public void tryAgain()
+    {
+        SceneManager.LoadScene(StaticData.level);
     }
 }

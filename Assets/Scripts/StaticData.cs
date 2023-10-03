@@ -13,9 +13,10 @@ public class StaticData : MonoBehaviour
 
     //Scenes
     public static int titleScreen = 0;
-    public static int levels = 1;
+    public static int tutorialScreen = 1;
+    public static int levels = 2;
     public static int lvlOne = 3;
     public static int lvlTwo = 4;
     public static int lvlThree = 5;
-    public static int lose;
+    public static int loseScreen = 6;
 }

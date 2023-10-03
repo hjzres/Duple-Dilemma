@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Over")]
     public bool gameOver;
-    [SerializeField] int gameOverScene;
     [SerializeField] GameObject[] hearts;
 
     private void Awake()
@@ -89,7 +88,7 @@ public class GameManager : MonoBehaviour
 
         if(gameOver)
         {
-            SceneManager.LoadScene(gameOverScene);
+            SceneManager.LoadScene(StaticData.loseScreen);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
