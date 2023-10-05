@@ -21,7 +21,6 @@ public class Win : MonoBehaviour
 
     [Header("Other")]
     public bool win;
-    [SerializeField] private GameObject winDisplay;
     private float timer;
 
     [Header("Win Screen")]
@@ -43,7 +42,7 @@ public class Win : MonoBehaviour
         win1Already = false;
         win2Already = false;
 
-        winDisplay.SetActive(false);
+        winScreen.SetActive(false);
     }
 
     private void Update()
@@ -115,7 +114,7 @@ public class Win : MonoBehaviour
             timer += Time.deltaTime;
 
             if (animator) {
-                winDisplay.SetActive(true);
+                winScreen.SetActive(true);
                 animator.Play("WinScreenAnimation");
                 StartCoroutine(ws.fillingStars());
             }
