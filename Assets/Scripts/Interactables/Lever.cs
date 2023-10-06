@@ -15,6 +15,7 @@ public class Lever : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private GameObject[] onOnOn;
     [SerializeField] private GameObject[] offOnOn;
+    [SerializeField] private GameObject leftE, rightE;
 
     private void Awake()
     {
@@ -86,5 +87,21 @@ public class Lever : MonoBehaviour
             On = !On;
             isReady = false;
         }
+
+        if (other.name == "Capsule 1")
+        {
+            leftE.SetActive(true);
+        }
+
+        if (other.name == "Capsule 2")
+        {
+            rightE.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        leftE.SetActive(false);
+        rightE.SetActive(false);
     }
 }

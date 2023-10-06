@@ -19,11 +19,14 @@ public class ButtonClick : MonoBehaviour
 
     public string outcome;
 
+    [SerializeField] private GameObject leftE, rightE;
+
     private void Start()
     {
         isReady = true;
         Manager = GameManager.GetComponent<GameManager>();
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "player" && Input.GetKey(KeyCode.E) && isReady)
@@ -36,12 +39,14 @@ public class ButtonClick : MonoBehaviour
         {
             whichPlayer = "Player 1";
             otherPlayer = "Player 2";
+            leftE.SetActive(true);
         }
 
         if (other.name == "Capsule 2")
         {
             whichPlayer = "Player 2";
             otherPlayer = "Player 1";
+            rightE.SetActive(true);
         }
     }
 
@@ -49,6 +54,8 @@ public class ButtonClick : MonoBehaviour
     {
         whichPlayer = null;
         otherPlayer = null;
+        leftE.SetActive(false);
+        rightE.SetActive(false);
     }
 
     private void Update()
