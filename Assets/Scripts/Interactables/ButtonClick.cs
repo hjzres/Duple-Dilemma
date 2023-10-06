@@ -85,7 +85,7 @@ public class ButtonClick : MonoBehaviour
     {
         switch (outcome)
         {
-            case "switch":
+            case "swap":
                 Manager.OtherSide();
                 break;
             case "death":
