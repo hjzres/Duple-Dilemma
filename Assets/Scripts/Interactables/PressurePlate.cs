@@ -8,7 +8,7 @@ public class PressurePlate : MonoBehaviour
     public Material NotPressed;
     public Material Pressed;
 
-    private bool IsPressed;
+    public bool IsPressed;
     private Renderer renderer;
 
     [SerializeField] private int AmountOnPlate;
