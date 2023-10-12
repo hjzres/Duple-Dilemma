@@ -56,4 +56,16 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene(StaticData.level);  
     }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene(StaticData.titleScreen);
+    }
+
+    public void resume()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1;
+    }
 }
