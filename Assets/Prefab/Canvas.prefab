@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 4912466274610561069}
   - component: {fileID: 226014987527821135}
   - component: {fileID: 2719889427170819895}
+  - component: {fileID: 9068993518739292944}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -676,6 +677,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 9068993518739292944}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5683317290867060105}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -688,6 +701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9068993518739292944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931729784903236760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41cb2d4f4ef964498338632014f2c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3146567318788441702
 GameObject:
   m_ObjectHideFlags: 0
