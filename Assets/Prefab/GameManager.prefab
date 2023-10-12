@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2035257474}
   - component: {fileID: 4801725583776607991}
   - component: {fileID: 4540783219114541270}
+  - component: {fileID: 8365702943603332641}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -53,13 +54,12 @@ MonoBehaviour:
   playerOneFrozen: 0
   playerTwoFrozen: 0
   minimumY: -5
-  lives: 0
+  lives: 3
   originalPlayerOne: {x: 0, y: 0, z: 0}
   originalPlayerTwo: {x: 0, y: 0, z: 0}
   playerOneSpawn: {x: 0, y: 0, z: 0}
   playerTwoSpawn: {x: 0, y: 0, z: 0}
   gameOver: 0
-  gameOverScene: 2
   hearts:
   - {fileID: 0}
   - {fileID: 0}
@@ -78,9 +78,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winPlatformOne: {fileID: 0}
   winPlatformTwo: {fileID: 0}
-  Canvas: {fileID: 0}
+  split: {fileID: 0}
   playerOneCam: {fileID: 0}
   playerTwoCam: {fileID: 0}
+  amount: 0
+  win1Already: 0
+  win2Already: 0
+  win: 0
+  winScreen: {fileID: 0}
 --- !u!114 &4540783219114541270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,4 +99,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
-  time: 300
+  time: 100
+  TimeUntilTwoStars: 60
+  TimeUntilOneStar: 20
+  stars: 0
+--- !u!114 &8365702943603332641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859596757261225271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e7eaeda8b96ad4d8543ae0d3a3b8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 0}

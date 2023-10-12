@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,33 +8,33 @@ public class Button : MonoBehaviour
 {
     public void SceneChange(int scene)
     {
-        if(scene == StaticData.lvlOne)
-        {
-            StaticData.level = 1;
-        } 
-        if(scene == StaticData.lvlTwo)
-        {
-            if (StaticData.lvlOneStars >= 2)
-            {
-                StaticData.level = 2;
-            }
-            else
-            {
-                scene = StaticData.titleScreen;
-            }
-        }
-        if (scene == StaticData.lvlThree)
-        {
-            if (StaticData.lvlTwoStars >= 2)
-            {
-                StaticData.level = 3;
-            }
-            else
-            {
-                scene = StaticData.titleScreen;
-            }
-        }
+        SceneManager.LoadScene(scene);
+    }
 
+    public void loadLevel(int level)
+    {
+        switch (level)
+        {
+            case 1:
+                SceneManager.LoadScene(StaticData.lvlOne);
+                break;
+            case 2:
+                if(StaticData.levelsDone >= 1)
+                {
+                    SceneManager.LoadScene(StaticData.lvlTwo);
+                }
+                break;
+            case 3:
+                if(StaticData.levelsDone >= 2)
+                {
+                    SceneManager.LoadScene(StaticData.lvlThree);
+                }
+                break;
+        }
+    }
+
+    public void tryAgain()
+    {
         switch (StaticData.level)
         {
             case 1:
@@ -45,21 +46,14 @@ public class Button : MonoBehaviour
             case 3:
                 SceneManager.LoadScene(StaticData.lvlThree);
                 break;
-            default:
-                SceneManager.LoadScene(scene);
-                break;
         }
-
-    }
-
-    public void tryAgain()
-    {
-        SceneManager.LoadScene(StaticData.level);  
+        Time.timeScale = 1;
     }
 
     public void mainMenu()
     {
         SceneManager.LoadScene(StaticData.titleScreen);
+        Time.timeScale = 1;
     }
 
     public void resume()

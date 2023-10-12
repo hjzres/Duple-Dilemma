@@ -221,8 +221,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 60046432}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: SceneChange
-        m_Mode: 3
+        m_MethodName: mainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1006,8 +1006,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 60046431}
   - {fileID: 1909458024}
+  - {fileID: 60046431}
   - {fileID: 89524300}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
