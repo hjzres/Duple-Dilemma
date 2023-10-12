@@ -54,6 +54,6 @@ public class Button : MonoBehaviour
 
     public void tryAgain()
     {
-        SceneManager.LoadScene(StaticData.level);
+        SceneManager.LoadScene(StaticData.level);  
     }
 }
