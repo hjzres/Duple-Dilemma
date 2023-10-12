@@ -17,17 +17,20 @@ public class Button : MonoBehaviour
         {
             case 1:
                 SceneManager.LoadScene(StaticData.lvlOne);
+                StaticData.level = 1;
                 break;
             case 2:
                 if(StaticData.levelsDone >= 1)
                 {
                     SceneManager.LoadScene(StaticData.lvlTwo);
+                    StaticData.level = 2;
                 }
                 break;
             case 3:
                 if(StaticData.levelsDone >= 2)
                 {
-                    SceneManager.LoadScene(StaticData.lvlThree);
+                    SceneManager.LoadScene(StaticData.lvlThree);    
+                    StaticData.level = 3;
                 }
                 break;
         }
