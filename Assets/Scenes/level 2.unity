@@ -339,15 +339,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: time
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1641711174}
+    - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: TimeUntilOneStar
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: TimeUntilTwoStars
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: split
@@ -3050,6 +3054,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b7460275ef628f4b9271f2a75c765e5, type: 3}
+--- !u!114 &1641711174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 329188680974074574, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+  m_PrefabInstance: {fileID: 1482607082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1642480266
 PrefabInstance:
   m_ObjectHideFlags: 0
