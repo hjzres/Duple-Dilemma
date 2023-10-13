@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1198,10 +1198,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 4946883}
-    - target: {fileID: 2907383470386783742, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2907383471068054723, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1284,26 +1280,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2907383471068054727, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505229376093133075, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3951424723623404015, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702391655060602016, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.50001526
-      objectReference: {fileID: 0}
-    - target: {fileID: 7544114554001600052, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8380517438481695429, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

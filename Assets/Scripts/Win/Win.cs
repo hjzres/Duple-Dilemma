@@ -121,8 +121,6 @@ public class Win : MonoBehaviour
 
             if (timer >= 5)
             {
-
-
                 win = true;
             }
         }

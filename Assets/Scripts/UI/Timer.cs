@@ -59,17 +59,29 @@ public class Timer : MonoBehaviour
                     {
                         StaticData.lvlOneStars = stars;
                     }
+                    if(stars == 3 && StaticData.levelsDone < 1)
+                    {
+                        StaticData.levelsDone = 1;
+                    }
                     break;
                 case 2:
                     if(stars > StaticData.lvlTwoStars)
                     {
                         StaticData.lvlTwoStars = stars;
                     }
+                    if(stars == 3 && StaticData.levelsDone < 2)
+                    {
+                        StaticData.levelsDone = 2;
+                    }
                     break;
                 case 3:
                     if(stars > StaticData.lvlThreeStars)
                     {
                         StaticData.lvlTwoStars = stars;
+                    }
+                    if(stars == 3 && StaticData.levelsDone < 3)
+                    {
+                        StaticData.levelsDone = 3;
                     }
                     break;
             }
