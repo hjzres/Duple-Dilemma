@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4074,22 +4074,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: lives
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: leftNew
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: minimumY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: rightNew
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: playerOne
       value: 
       objectReference: {fileID: 367916641}
@@ -4112,10 +4096,6 @@ PrefabInstance:
     - target: {fileID: 3859596757261225271, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859596757261225417, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3859596757261225417, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4158,47 +4138,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: time
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: timer
       value: 
       objectReference: {fileID: 988633450}
-    - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: TimeUntilOneStar
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540783219114541270, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: TimeUntilTwoStars
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: split
       value: 
       objectReference: {fileID: 378588523}
     - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: Canvas
-      value: 
-      objectReference: {fileID: 1828023344}
-    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1298060419}
-    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: playerOne
-      value: 
-      objectReference: {fileID: 367916641}
-    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: playerTwo
-      value: 
-      objectReference: {fileID: 657933900}
-    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: winScreen
-      value: 
-      objectReference: {fileID: 1298060417}
-    - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
-      propertyPath: winDisplay
       value: 
       objectReference: {fileID: 1298060417}
     - target: {fileID: 4801725583776607991, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
@@ -6298,11 +6246,6 @@ MeshFilter:
 --- !u!1 &1298060417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3327811807877419153, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-  m_PrefabInstance: {fileID: 204824182}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1298060419 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3916269304976106057, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
   m_PrefabInstance: {fileID: 204824182}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1322559587
@@ -8780,11 +8723,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797563813}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1828023344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2907383471068054723, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
-  m_PrefabInstance: {fileID: 204824182}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1828565877
 GameObject:
   m_ObjectHideFlags: 0

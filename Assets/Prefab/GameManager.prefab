@@ -53,7 +53,7 @@ MonoBehaviour:
   playerTwoRigidbody: {fileID: 0}
   playerOneFrozen: 0
   playerTwoFrozen: 0
-  minimumY: -5
+  minimumY: 0
   lives: 3
   originalPlayerOne: {x: 0, y: 0, z: 0}
   originalPlayerTwo: {x: 0, y: 0, z: 0}
@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
-  time: 100
-  TimeUntilTwoStars: 60
-  TimeUntilOneStar: 20
+  time: 180
+  TimeUntilTwoStars: 120
+  TimeUntilOneStar: 60
   stars: 0
 --- !u!114 &8365702943603332641
 MonoBehaviour:
