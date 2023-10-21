@@ -64,6 +64,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  instructions:
+  - 
+  - 
+  - 
+  instructionText: {fileID: 0}
+  section: 0
 --- !u!114 &4801725583776607991
 MonoBehaviour:
   m_ObjectHideFlags: 0

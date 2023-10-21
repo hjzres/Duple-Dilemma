@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class GameManager : MonoBehaviour
     [Header("Game Over")]
     public bool gameOver;
     [SerializeField] GameObject[] hearts;
+
+    [Header("Instructions")]
+    public string[] instructions = new string[3];
+    [SerializeField] Text instructionText;
+    private int section = 1;
+
 
     private void Awake()
     {
@@ -104,6 +111,16 @@ public class GameManager : MonoBehaviour
             case 0:
                 gameOver = true;
                 break;
+        }
+
+        instructionText.text = "Objective: " + instructions[section - 1];
+    }
+
+    public void NextSection()
+    {
+        if(section < instructions.Length)
+        {
+            section++;
         }
     }
 }
