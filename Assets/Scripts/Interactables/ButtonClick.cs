@@ -21,6 +21,9 @@ public class ButtonClick : MonoBehaviour
 
     [SerializeField] private GameObject leftE, rightE;
 
+    public bool objectiveList;
+    public int objectiveNumber;
+
     private void Start()
     {
         isReady = true;
@@ -33,6 +36,10 @@ public class ButtonClick : MonoBehaviour
         { 
             isReady = false;
             results();
+            if (objectiveList && Manager.section == objectiveNumber) 
+            {
+                Manager.section += 1;
+            }
         }
 
         if (other.name == "Capsule 1")

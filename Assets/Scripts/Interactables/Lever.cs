@@ -16,11 +16,19 @@ public class Lever : MonoBehaviour
     [SerializeField] private GameObject[] onOnOn;
     [SerializeField] private GameObject[] offOnOn;
     [SerializeField] private GameObject leftE, rightE;
+    [Header("Objective")]
+    public bool objectiveList;
+    public int objectiveNumber;
+    [Header("Other")]
+    [SerializeField] private GameObject GameManager;
+    private GameManager Manager;
 
     private void Awake()
     {
         On = false;
         Delay = 1f;
+        isReady = true;
+        Manager = GameManager.GetComponent<GameManager>();
     }
 
     private void turnOn()
@@ -86,6 +94,10 @@ public class Lever : MonoBehaviour
         {
             On = !On;
             isReady = false;
+            if (objectiveList && Manager.section == objectiveNumber)
+            {
+                Manager.section += 1;
+            }
         }
 
         if (other.name == "Capsule 1")
