@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4786636, y: 0.6748449}
   m_AnchorMax: {x: 0.994, y: 1}
-  m_AnchoredPosition: {x: -1.5, y: -0.17922974}
-  m_SizeDelta: {x: -6.908386, y: -3.6414032}
+  m_AnchoredPosition: {x: -1.5, y: -50.188995}
+  m_SizeDelta: {x: -6.9084, y: 96.3781}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205512353
 MonoBehaviour:
@@ -213,7 +213,12 @@ MonoBehaviour:
 
     You have to find the winning platform to win the game.
     There are at least 3 parts to each level and it will tell you what to do in each
-    part, but not how.'
+    part, but not how.
+
+
+    You need at least 2 stars to pass each level
+
+'
 --- !u!222 &205512355
 CanvasRenderer:
   m_ObjectHideFlags: 0

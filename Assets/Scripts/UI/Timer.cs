@@ -37,7 +37,6 @@ public class Timer : MonoBehaviour
 
         if (Won())
         {
-            Debug.Log("test");
             
             if (time >= TimeUntilTwoStars)
             {
@@ -59,7 +58,7 @@ public class Timer : MonoBehaviour
                     {
                         StaticData.lvlOneStars = stars;
                     }
-                    if(stars == 3 && StaticData.levelsDone < 1)
+                    if(stars >= 2 && StaticData.levelsDone < 1)
                     {
                         StaticData.levelsDone = 1;
                     }
@@ -69,7 +68,7 @@ public class Timer : MonoBehaviour
                     {
                         StaticData.lvlTwoStars = stars;
                     }
-                    if(stars == 3 && StaticData.levelsDone < 2)
+                    if(stars >= 2 && StaticData.levelsDone < 2)
                     {
                         StaticData.levelsDone = 2;
                     }
@@ -79,7 +78,7 @@ public class Timer : MonoBehaviour
                     {
                         StaticData.lvlTwoStars = stars;
                     }
-                    if(stars == 3 && StaticData.levelsDone < 3)
+                    if(stars >= 2 && StaticData.levelsDone < 3)
                     {
                         StaticData.levelsDone = 3;
                     }
