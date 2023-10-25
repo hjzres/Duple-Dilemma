@@ -564,6 +564,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6400d2a63ec71a84ab3c16b6df057a02, type: 3}
+--- !u!114 &367251760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7891553114589723753, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+  m_PrefabInstance: {fileID: 1557251972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &367473848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7819323416802751884, guid: 84b3982509f6b8d49b4693769938c6b3, type: 3}
@@ -2552,7 +2563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6513381761085227438, guid: 2e65dfcbf9146b641be5b5a7b03a4b6a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7.448062
+      value: 6.8082733
       objectReference: {fileID: 0}
     - target: {fileID: 6513381761085227438, guid: 2e65dfcbf9146b641be5b5a7b03a4b6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2564,7 +2575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6513381761085227438, guid: 2e65dfcbf9146b641be5b5a7b03a4b6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.5168
+      value: -4.8368
       objectReference: {fileID: 0}
     - target: {fileID: 6513381761085227438, guid: 2e65dfcbf9146b641be5b5a7b03a4b6a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2728,6 +2739,18 @@ PrefabInstance:
       propertyPath: rightE
       value: 
       objectReference: {fileID: 851541978}
+    - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1221270560}
+    - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
+      propertyPath: objectiveList
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
+      propertyPath: objectiveNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
       propertyPath: onOnOn.Array.size
       value: 2
@@ -3035,6 +3058,9 @@ MonoBehaviour:
   - {fileID: 367473848}
   - {fileID: 1807723103}
   - {fileID: 810015564}
+  objectiveList: 0
+  objectiveNumber: 0
+  GameManager: {fileID: 1221270560}
 --- !u!1001 &1050604690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3909,6 +3935,9 @@ MonoBehaviour:
   - {fileID: 367473848}
   - {fileID: 1807723103}
   - {fileID: 810015564}
+  objectiveList: 1
+  objectiveNumber: 2
+  GameManager: {fileID: 1221270560}
 --- !u!1 &1199299211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1970995490911543383, guid: 3f73b22c265eb3c49a8622c04f5740ee, type: 3}
@@ -3928,6 +3957,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: section
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: minimumY
       value: -15
       objectReference: {fileID: 0}
@@ -3940,6 +3973,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 861259757}
     - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructionText
+      value: 
+      objectReference: {fileID: 367251760}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 1967984927}
@@ -3951,6 +3988,26 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 1893230801}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[0]
+      value: Get to the other side of the acid
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[1]
+      value: Open the wall on the other side of the liquid
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[2]
+      value: Pull a lever to open the win platfrom up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[3]
+      value: Find the win platform
+      objectReference: {fileID: 0}
     - target: {fileID: 3859596757261225271, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -4928,6 +4985,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5022367518087609269, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.47999573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161032174442823105, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.99998474
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5298,6 +5363,18 @@ PrefabInstance:
       propertyPath: rightE
       value: 
       objectReference: {fileID: 851541978}
+    - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1221270560}
+    - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
+      propertyPath: objectiveList
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
+      propertyPath: objectiveNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6392282835461172699, guid: 4f1b595bb6c15a84c8fd929037949758, type: 3}
       propertyPath: onOnOn.Array.size
       value: 1
