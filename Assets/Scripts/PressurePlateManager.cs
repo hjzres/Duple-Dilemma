@@ -12,6 +12,13 @@ public class PressurePlateManager : MonoBehaviour
     private PressurePlate[] pp;
     [SerializeField] private StringBuilder amountPressed = new StringBuilder();
     private string expectedoutcome = "";
+    [Header("Objective")]
+    public bool objectiveList;
+    public int objectiveNumber;
+    [Header("Other")]
+    [SerializeField] private GameObject GameManager;
+    private GameManager Manager;
+
 
     private void Awake()
     {
@@ -25,7 +32,7 @@ public class PressurePlateManager : MonoBehaviour
             expectedoutcome += "1";
         }
         
-        
+        Manager = GameManager.GetComponent<GameManager>();
     }
 
     private void Update()
@@ -45,6 +52,10 @@ public class PressurePlateManager : MonoBehaviour
         if(amountPressed.Equals(expectedoutcome))
         {
             gameObject.SetActive(false);
+            if (objectiveList && Manager.section == objectiveNumber)
+            {
+                Manager.section += 1;
+            }
         }
     }
     

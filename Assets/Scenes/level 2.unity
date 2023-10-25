@@ -143,6 +143,9 @@ MonoBehaviour:
   pressureplates:
   - {fileID: 1442083585}
   - {fileID: 1238893800}
+  objectiveList: 1
+  objectiveNumber: 1
+  GameManager: {fileID: 271858485}
 --- !u!1001 &26809132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -340,6 +343,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: section
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: minimumY
       value: -10
       objectReference: {fileID: 0}
@@ -352,6 +359,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1053571671}
     - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructionText
+      value: 
+      objectReference: {fileID: 1482607084}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 1013185285}
@@ -363,6 +374,26 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 1732327542}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[0]
+      value: Open the door using the pressure plates provided on Red side
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[1]
+      value: Open the second door on the Blue side with the pressure plates provided
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[2]
+      value: Get across the acid
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035257474, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
+      propertyPath: instructions.Array.data[3]
+      value: Go up to the win platform
+      objectReference: {fileID: 0}
     - target: {fileID: 3859596757261225271, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -531,6 +562,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureplates:
   - {fileID: 1026125630}
+  objectiveList: 1
+  objectiveNumber: 3
+  GameManager: {fileID: 271858485}
 --- !u!1001 &141355676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -678,6 +712,9 @@ MonoBehaviour:
   - {fileID: 272073676}
   - {fileID: 735642731}
   - {fileID: 1823276781}
+  objectiveList: 1
+  objectiveNumber: 2
+  GameManager: {fileID: 271858485}
 --- !u!1 &271858485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3859596757261225271, guid: 34095c2d2ba159a449778ccf7a3dea6e, type: 3}
@@ -2182,7 +2219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3442418250048845553, guid: 5b7460275ef628f4b9271f2a75c765e5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.8966594
+      value: 2.803567
       objectReference: {fileID: 0}
     - target: {fileID: 3442418250048845553, guid: 5b7460275ef628f4b9271f2a75c765e5, type: 3}
       propertyPath: m_LocalScale.z
@@ -2194,7 +2231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3442418250048845553, guid: 5b7460275ef628f4b9271f2a75c765e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4098
+      value: -2.4563
       objectReference: {fileID: 0}
     - target: {fileID: 3442418250048845553, guid: 5b7460275ef628f4b9271f2a75c765e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3192,9 +3229,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5022367518087609269, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.47999573
+      objectReference: {fileID: 0}
     - target: {fileID: 5565608134553582366, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3206,6 +3247,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3327811807877419153, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
   m_PrefabInstance: {fileID: 1482607082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482607084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7891553114589723753, guid: cd65b02aa6963374e8e1eb58a746144e, type: 3}
+  m_PrefabInstance: {fileID: 1482607082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1540797539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4071,6 +4123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureplates:
   - {fileID: 1026125630}
+  objectiveList: 0
+  objectiveNumber: 0
+  GameManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
