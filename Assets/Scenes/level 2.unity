@@ -797,6 +797,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6863894608521849995, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 6863894608521850005, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -805,7 +809,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5025143007324397647, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1311,6 +1316,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6863894608521849995, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 6863894608521850005, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
       propertyPath: m_Name
       value: Box (7)
@@ -1319,7 +1328,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5025143007324397647, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4020,6 +4030,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6863894608521849995, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 6863894608521850005, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -4028,7 +4042,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5025143007324397647, guid: d87315a31fbcbf943afb728765ff0ba6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
