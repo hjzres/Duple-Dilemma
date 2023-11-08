@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Liquid : MonoBehaviour
 {
     [SerializeField] private string liquid;
+
     [SerializeField] private GameObject GameManager;
     private GameManager Manager;
-    [SerializeField] GameObject playerOneCam, playerTwoCam;
-    [SerializeField] GameObject waterSeeThrough, lavaSeeThrough;
+
+    [SerializeField] GameObject playerOneCam, playerTwoCam; // Player Cams
+    [SerializeField] GameObject waterSeeThrough, lavaSeeThrough; // liquid seethrough objects
 
     private void Awake()
     {
         Manager = GameManager.GetComponent<GameManager>();
+
         if (liquid != "acid")
         {
             waterSeeThrough.SetActive(false);
@@ -22,53 +27,54 @@ public class Liquid : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(liquid == "water")
+        switch (liquid) 
         {
-            if(other.gameObject.name == Manager.playerOne.name)
-            {
-                Manager.Death();
-            }
-            if (other.gameObject.name == playerTwoCam.name)
-            {
-                waterSeeThrough.SetActive(true);
-            }
+            case "water":
+                if (other.gameObject.name == Manager.playerOne.name)
+                {
+                    Manager.Death(); 
+                }
+                if (other.gameObject.name == playerTwoCam.name)
+                {   
+                    waterSeeThrough.SetActive(true); 
+                }
+                break;
+            case "lava":
+                if (other.gameObject.name == Manager.playerTwo.name)
+                {
+                    Manager.Death(); 
+                }
+                if (other.gameObject.name == playerOneCam.name)
+                {
+                    lavaSeeThrough.SetActive(true); 
+                }
+                break;
+            case "acid":
+                if (other.gameObject.name == Manager.playerOne.name || other.gameObject.name == Manager.playerTwo.name)
+                {
+                    Manager.Death();
+                }
+                break;
 
-        }
-        if(liquid == "lava")
-        {
-            if(other.gameObject.name == Manager.playerTwo.name)
-            {
-                Manager.Death();
-            }
-            if(other.gameObject.name == playerOneCam.name)
-            {
-                lavaSeeThrough.SetActive(true);
-            }
-        }
-        if(liquid == "acid")
-        {
-            if(other.gameObject.name == Manager.playerOne.name || other.gameObject.name == Manager.playerTwo.name)
-            {
-                Manager.Death();
-            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(liquid == "water")
+        switch (liquid)
         {
-            if(other.gameObject.name == playerTwoCam.name)
-            {
-                waterSeeThrough.SetActive(false);
-            }
-        }
-        if(liquid == "lava")
-        {
-            if(other.gameObject.name == playerOneCam.name)
-            {
-                lavaSeeThrough.SetActive(false);
-            }
+            case "water":
+                if (other.gameObject.name == playerTwoCam.name)
+                {
+                    waterSeeThrough.SetActive(false);
+                }
+                break;
+            case "lava":
+                if (other.gameObject.name == playerOneCam.name)
+                {
+                    lavaSeeThrough.SetActive(false);
+                }
+                break;
         }
     }
 }
