@@ -8,13 +8,22 @@ public class ObjectMovement : MonoBehaviour
     [SerializeField] GameObject playerOne, playerTwo;
     public float pushingSpeed = 0.75f;
     public bool isPushing = false;
+    public SoundEffects soundEffect;
+
+    private void Awake()
+    {
+        soundEffect = GameObject.Find("SoundEffect").GetComponent<SoundEffects>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         // this object will move when the player is touching it in the same direction the player is facing with the speed of the player's velocity multiplied by the push speed
         if (collision.gameObject.tag == "player")
+
         {
+            soundEffect.putSoundEffect();
             isPushing = true;
             transform.position += collision.gameObject.GetComponent<Rigidbody>().velocity * pushingSpeed * Time.deltaTime;
+
         }
 
     }
@@ -24,6 +33,7 @@ public class ObjectMovement : MonoBehaviour
         //When the player is holding e and the player is 5 units away from the object, the object will move with the player in its direction
         if (Input.GetKey(KeyCode.E))
         {
+            soundEffect.putSoundEffect();
             if (Vector3.Distance(playerOne.transform.position, transform.position) < 5f)
             {
                 // Calculate the direction vector from the object to the player
@@ -31,6 +41,8 @@ public class ObjectMovement : MonoBehaviour
 
                 // Move the object in the direction of the player
                 transform.position += direction * Time.deltaTime * pushingSpeed;
+
+                
             }
             if (Vector3.Distance(playerTwo.transform.position, transform.position) < 5f)
             {
@@ -39,6 +51,7 @@ public class ObjectMovement : MonoBehaviour
 
                 // Move the object in the direction of the player
                 transform.position += direction * Time.deltaTime * pushingSpeed;
+
             }
         }
     }
