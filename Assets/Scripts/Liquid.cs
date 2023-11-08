@@ -29,7 +29,7 @@ public class Liquid : MonoBehaviour
     {
         switch (liquid) 
         {
-            case "water":
+            case "water": // When the player hits water
                 if (other.gameObject.name == Manager.playerOne.name)
                 {
                     Manager.Death(); 
@@ -39,7 +39,8 @@ public class Liquid : MonoBehaviour
                     waterSeeThrough.SetActive(true); 
                 }
                 break;
-            case "lava":
+
+            case "lava": // When the player hits lava
                 if (other.gameObject.name == Manager.playerTwo.name)
                 {
                     Manager.Death(); 
@@ -49,7 +50,8 @@ public class Liquid : MonoBehaviour
                     lavaSeeThrough.SetActive(true); 
                 }
                 break;
-            case "acid":
+
+            case "acid": // When the player hits acid
                 if (other.gameObject.name == Manager.playerOne.name || other.gameObject.name == Manager.playerTwo.name)
                 {
                     Manager.Death();
