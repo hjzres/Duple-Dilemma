@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 public class SoundEffects : MonoBehaviour
 {
     private AudioSource src;
-    public bool play = false;
+    public bool isPushed;
 
     private void Awake()
     {
@@ -16,18 +16,13 @@ public class SoundEffects : MonoBehaviour
 
     private void Update()
     {
-        if (play)
+        if (isPushed)
         {
             src.Play();
-            play = false;
         }
-    }
-
-    public void putSoundEffect()
-    {
-        if (!play)
+        else
         {
-            play = true;
+            src.Stop();
         }
     }
 }
