@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4801725583776607991}
   - component: {fileID: 4540783219114541270}
   - component: {fileID: 8365702943603332641}
+  - component: {fileID: 3952443786271807072}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   playerTwoRigidbody: {fileID: 0}
   playerOneFrozen: 0
   playerTwoFrozen: 0
-  minimumY: 0
+  minimumY: -10
   lives: 3
   originalPlayerOne: {x: 0, y: 0, z: 0}
   originalPlayerTwo: {x: 0, y: 0, z: 0}
@@ -65,11 +66,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   instructions:
-  - 
-  - 
-  - 
+  - Open the door using the pressure plates provided on Red side
+  - Open the second door on the Blue side with the pressure plates provided
+  - Get across the acid
+  - Go up to the win platform
   instructionText: {fileID: 0}
-  section: 0
+  section: 1
 --- !u!114 &4801725583776607991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &3952443786271807072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859596757261225271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb678e9f34f12408e5d1825eab78e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxes: []
+  soundEffect: {fileID: 0}
+  soundEffectOff: 
