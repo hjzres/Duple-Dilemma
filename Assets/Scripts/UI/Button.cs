@@ -4,15 +4,22 @@ using System.Net.Http.Headers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//[RequireComponent(typeof(AudioSource))]
 public class Button : MonoBehaviour
 {
+    //private AudioSource audioSource;
+    private void Awake() {
+        //audioSource = GetComponent<AudioSource>();
+    }
     public void SceneChange(int scene)
     {
+        //audioSource.Play();
         SceneManager.LoadScene(scene);
     }
 
     public void loadLevel(int level)
     {
+        //audioSource.Play();
         switch (level)
         {
             case 1:
@@ -38,6 +45,7 @@ public class Button : MonoBehaviour
 
     public void tryAgain()
     {
+        //audioSource.Play();
         switch (StaticData.level)
         {
             case 1:
@@ -55,14 +63,18 @@ public class Button : MonoBehaviour
 
     public void mainMenu()
     {
+        //audioSource.Play();
         SceneManager.LoadScene(StaticData.titleScreen);
         Time.timeScale = 1;
     }
 
     public void resume()
     {
+        //audioSource.Play();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1;
     }
+
+
 }

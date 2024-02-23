@@ -12,13 +12,13 @@ public class BoxManager : MonoBehaviour
     public string soundEffectOff;
     private void Awake()
     {
-        soundEffect = GameObject.Find("SoundEffect").GetComponent<SoundEffects>();
+        //soundEffect = GameObject.Find("SoundEffect").GetComponent<SoundEffects>();
         boxes = GameObject.FindGameObjectsWithTag("obstacle");
         foreach(GameObject box in boxes)
         {
-            soundEffectData.Append("0");
+            //soundEffectData.Append("0");
         }
-        soundEffectOff = soundEffectData.ToString();
+        //soundEffectOff = soundEffectData.ToString();
     }
     void Update()
     {
@@ -27,15 +27,15 @@ public class BoxManager : MonoBehaviour
         {
             if (boxes[i].GetComponent<ObjectMovement>().IsMoving())
             {
-                soundEffectData[i] = '1';
+                //soundEffectData[i] = '1';
             }
             else
             {
-                soundEffectData[i] = '0';
+                //soundEffectData[i] = '0';
             }
         }
 
-        soundEffect.isPushed = soundEffectData.ToString().Contains("1");
+        //soundEffect.isPushed = soundEffectData.ToString().Contains("1");
 
         /*if (soundEffectData.ToString().Equals(soundEffectOff))
         {
@@ -46,7 +46,7 @@ public class BoxManager : MonoBehaviour
         {
             soundEffect.isPushed = false;
         }*/
-        Debug.Log(soundEffectData.ToString());
+        //Debug.Log(soundEffectData.ToString());
     }
 
 }
